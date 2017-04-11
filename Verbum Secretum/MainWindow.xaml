@@ -1,0 +1,51 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="Verbum secretum" Height="450" Width="367" ResizeMode="CanMinimize" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" Background="#FFD1D4CA" Icon="favicon.ico">
+   <Window.TaskbarItemInfo>
+      <TaskbarItemInfo/>
+   </Window.TaskbarItemInfo>
+   <Grid Margin="0">
+      <DockPanel>
+         <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Links" >
+               <MenuItem Header="_Diceware" Click="diceware_click"/>
+               <MenuItem Header="_How secure is my password?" Click="howsecure_click"/>
+               <MenuItem Header="_Kaspersky password check" Click="kaspersky_click"/>
+               <MenuItem Header="_xkcd comic" Click="xkcd_click"/>
+            </MenuItem>
+         </Menu>
+         <StackPanel></StackPanel>
+      </DockPanel>
+      <Button x:Name="btGenerate" Content="Generate" Margin="0,225,0,0" VerticalAlignment="Center" Width="114" Height="40" Click="btGenerate_Click" HorizontalAlignment="Center" Foreground="Black" Background="WhiteSmoke"/>
+      <Grid Margin="10,78,0,182" HorizontalAlignment="Left">
+         <RadioButton x:Name="rbDiceware" Content="Diceware" HorizontalAlignment="Left" VerticalAlignment="Top" IsChecked="True" Height="15" Width="67"/>
+         <RadioButton x:Name="rbMixed" Content="Mixed" HorizontalAlignment="Left" Height="30" Width="67" Margin="0" VerticalAlignment="Bottom"/>
+      </Grid>
+      <TextBox x:Name="tbPwdResult" HorizontalAlignment="Left" Height="23" Margin="15,368,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="256"/>
+      <Button x:Name="btCopy" Content="Copy" HorizontalAlignment="Left" Margin="285,368,0,0" VerticalAlignment="Top" Width="57" Height="23" Click="btCopy_Click" Background="WhiteSmoke"/>
+      <Grid Margin="108,89,0,275" HorizontalAlignment="Left">
+         <RadioButton x:Name="rbEnglish" Content="English" HorizontalAlignment="Left" VerticalAlignment="Top" IsChecked="True"/>
+         <RadioButton x:Name="rbPortuguese" Content="Portuguese" HorizontalAlignment="Left" Margin="0,22,0,0" VerticalAlignment="Top"/>
+      </Grid>
+      <Label x:Name="label" Content="Password generator" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="20" Foreground="Black" FontWeight="Bold"/>
+      <Label x:Name="label1" Content="Words:" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.021,0" Height="26" Width="47" Margin="232,89,0,306"/>
+      <ComboBox x:Name="comboWords" HorizontalAlignment="Center" Margin="235,90,0,0" VerticalAlignment="Top" SelectedIndex="0">
+         <ComboBoxItem Content="4" HorizontalAlignment="Left" Width="30"/>
+         <ComboBoxItem Content="5" HorizontalAlignment="Left" Width="30"/>
+         <ComboBoxItem Content="6" HorizontalAlignment="Left" Width="30"/>
+         <ComboBoxItem Content="7" HorizontalAlignment="Left" Width="30"/>
+      </ComboBox>
+      <CheckBox x:Name="cbAddNumbers" Content="Add Numbers" HorizontalAlignment="Left" Margin="104,224,0,0" VerticalAlignment="Top" Height="15" Width="94" IsChecked="True"/>
+      <CheckBox x:Name="cbAddSpecial" Content="Add special characters" HorizontalAlignment="Left" Margin="104,250,0,0" VerticalAlignment="Top" IsChecked="True"/>
+      <GroupBox x:Name="groupBox" Header="Options" HorizontalAlignment="Left" Height="105" Margin="94,65,0,0" VerticalAlignment="Top" Width="234">
+         <CheckBox x:Name="cbSpaces" Content="Add spaces" HorizontalAlignment="Left" Height="18" Margin="10,55,0,0" VerticalAlignment="Top" Width="79" IsChecked="True"/>
+      </GroupBox>
+      <GroupBox x:Name="groupBox1" Header="Options" HorizontalAlignment="Left" Height="87" Margin="94,197,0,0" VerticalAlignment="Top" Width="234"/>
+
+   </Grid>
+</Window>
