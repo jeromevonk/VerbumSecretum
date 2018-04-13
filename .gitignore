@@ -27,14 +27,18 @@
 *.lib
 
 # Executables
-*.exe
+#*.exe
 *.out
 *.app
 
-#Ignore the whole build folder
-build/Debug*
+#Ignore build items
+build/bin/*
+build/Debug/*
+build/Release/Verbum Secretum.vshost*
+build/Release/Verbum Secretum.pdb
+build/Release/*.config
 
 #Visual Studio
 *.VC.db
-.vs/
 *.aps
+source/.vs/*
