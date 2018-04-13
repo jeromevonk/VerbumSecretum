@@ -41,4 +41,4 @@ build/Release/*.config
 #Visual Studio
 *.VC.db
 *.aps
-source/.vs/*
+source/.vs/VerbumSecretum/v14/.suo
